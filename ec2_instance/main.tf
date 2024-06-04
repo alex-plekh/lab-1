@@ -9,6 +9,9 @@ terraform {
 
 provider "aws" {
   region                  = "us-east-1"
+  shared_config_files     = ["~/.aws/config"]
+  shared_credentials_files = ["~/.aws/credentials"]
+  profile                 = "default"
 }
 
 # Get the latest Amazon Linux AMI ID
@@ -27,7 +30,7 @@ data "aws_ami" "amazon_linux" {
 resource "aws_instance" "web" {
   ami                    = data.aws_ami.amazon_linux.id
   instance_type          = "t2.micro"
-  key_name               = "lab1-jenkins"
+  key_name               = "lab1"
   vpc_security_group_ids = [aws_security_group.web_sg.id]
 
   tags = {
