@@ -27,7 +27,7 @@ data "aws_ami" "amazon_linux" {
 resource "aws_instance" "web" {
   ami                    = data.aws_ami.amazon_linux.id
   instance_type          = "t2.micro"
-  key_name               = "lab1"
+  key_name               = "lab2-terraform-jenkins"
   vpc_security_group_ids = [aws_security_group.web_sg.id]
 
   tags = {
@@ -45,7 +45,7 @@ resource "aws_instance" "web" {
 }
 
 # Security group
-resource "aws_security_group" "web_sg" {
+resource "aws_security_group" "web_sg_jenkins_terraform" {
   name = "Ec2 instance sg"
 
   ingress {

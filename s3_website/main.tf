@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "website" {
-  bucket = "lab2-jenkins-bucket"
+  bucket = "lab2-jenkins-bucket-terraform"
   tags = {
     Name        = "Website"
     Environment = "Dev"
