@@ -31,7 +31,7 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = [aws_security_group.web_sg_jenkins_terraform.id]
 
   tags = {
-    "Name" = "New webserver"
+    "Name" = "New webserver jenkins"
   }
 
   user_data = <<-EOF
@@ -46,7 +46,7 @@ resource "aws_instance" "web" {
 
 # Security group
 resource "aws_security_group" "web_sg_jenkins_terraform" {
-  name = "Ec2 instance sg"
+  name = "Ec2 instance sg jenkins"
 
   ingress {
     from_port   = 80
