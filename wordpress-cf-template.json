@@ -14,6 +14,7 @@
     "DBUser": {
       "Description": "The database admin account username",
       "Type": "String",
+      "Default": "admin",
       "MinLength": "1",
       "MaxLength": "16",
       "AllowedPattern": "[a-zA-Z][a-zA-Z0-9]*",
@@ -22,6 +23,7 @@
     "DBPassword": {
       "Description": "The database admin account password",
       "Type": "String",
+      "Default": "Password123",
       "NoEcho": true,
       "MinLength": "8",
       "MaxLength": "41",
@@ -31,6 +33,7 @@
     "DBRootPassword": {
       "Description": "Root password for MySQL",
       "Type": "String",
+      "Default": "Password123",
       "NoEcho": true,
       "MinLength": "8",
       "MaxLength": "41",
