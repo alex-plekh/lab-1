@@ -114,7 +114,7 @@
       "Properties": {
         "DBName": {"Ref": "DBName"},
         "AllocatedStorage": "20",
-        "DBInstanceClass": "db.m5.large	",
+        "DBInstanceClass": "db.m5.large",
         "Engine": "MySQL",
         "MasterUsername": {"Ref": "DBUser"},
         "MasterUserPassword": {"Ref": "DBPassword"},
